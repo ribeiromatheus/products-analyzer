@@ -9,10 +9,8 @@ const visualRecognition = new VisualRecognitionV3({
 
 module.exports = {
     async recognize(req, res) {
-        const { image } = req.body;
-        //fs.createReadStream('./src/img/imagem0060.jpg')
         const classifyParams = {
-            images_file: fs.createReadStream('./src/img/imagem0060.jpg'),
+            images_file: fs.createReadStream('./tmp/uploads/' + req.file.filename),
             owners: ['me'],
             threshold: 0.3
         };
