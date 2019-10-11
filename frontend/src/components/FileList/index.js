@@ -3,7 +3,7 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import { MdCheckCircle, MdError, MdLink } from 'react-icons/md';
 import { Container, FileInfo, Preview } from './styles';
 
-const FileList = ({ files }) => (
+const FileList = ({ files, onDelete }) => (
     <Container>
         {files.map(uploadedFile => (
             <li key={uploadedFile.id}>
@@ -11,9 +11,14 @@ const FileList = ({ files }) => (
                     <Preview src={uploadedFile.preview} />
                     <div>
                         <strong>{uploadedFile.name}</strong>
-                        {!!uploadedFile.url && (
-                            <span>{uploadedFile.readableSize} <button onClick={() => { }}>Excluir</button></span>
-                        )}
+                        <span>
+                            {uploadedFile.readableSize}{" "}
+                            {!!uploadedFile.uploaded && (
+                                <button onClick={() => onDelete(uploadedFile.id)}>
+                                    Excluir
+                                </button>
+                            )}
+                        </span>
                     </div>
                 </FileInfo>
 
@@ -22,15 +27,16 @@ const FileList = ({ files }) => (
                         <CircularProgressbar
                             styles={{
                                 root: { width: 24 },
-                                path: { stroke: '#7159c1' }
+                                path: { stroke: "#7159c1" }
                             }}
                             strokeWidth={10}
                             value={uploadedFile.progress}
                         />
                     )}
 
-                    {uploadedFile.url && (
-                        <a href="https://avatars2.githubusercontent.com/u/41703972?v=4"
+                    {uploadedFile.uploaded && (
+                        <a
+                            href={uploadedFile.preview}
                             target="_blank"
                             rel="noopener noreferrer"
                         >

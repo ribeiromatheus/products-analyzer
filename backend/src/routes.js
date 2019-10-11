@@ -5,6 +5,8 @@ const VisualRecognitionController = require('./controllers/VisualRecognitionCont
 
 const routes = express.Router();
 
+routes.get('/recognize', VisualRecognitionController.index);
 routes.post('/recognize', multer(multerConfig).single('file'), VisualRecognitionController.recognize);
+routes.delete('/recognize/:id', VisualRecognitionController.remove);
 
 module.exports = routes;
