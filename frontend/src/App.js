@@ -21,6 +21,7 @@ class App extends Component {
       readableSize: filesize(file.size),
       preview: URL.createObjectURL(file),
       progress: 0,
+      status: '',
       uploaded: false,
       error: false
     }));
@@ -54,18 +55,12 @@ class App extends Component {
         this.updateFile(uploadedFile.id, {
           progress
         });
-
-        if (progress === 100) {
-          this.updateFile(uploadedFile.id, {
-            uploaded: true,
-          });
-        }
       }
     })
       .then(response => {
         this.updateFile(uploadedFile.id, {
           uploaded: true,
-          id: response.data._id
+          status: response.data,
         });
       })
       .catch(() => {
@@ -74,14 +69,6 @@ class App extends Component {
         });
       });
   };
-
-  handleDelete = async id => {
-    await api.delete(`recognize/${id}`);
-
-    this.setState({
-      uploadedFiles: this.state.uploadedFiles.filter(file => file.id !== id)
-    });
-  }
 
   render() {
     const { uploadedFiles } = this.state;
@@ -92,7 +79,7 @@ class App extends Component {
           <Logo />
           <Upload onUpload={this.handleUpload} />
           {!!uploadedFiles.length && (
-            <FileList files={uploadedFiles} onDelete={this.handleDelete} />
+            <FileList files={uploadedFiles} />
           )}
         </Content>
         <GlobalStyle />
