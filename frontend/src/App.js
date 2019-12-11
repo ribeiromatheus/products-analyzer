@@ -8,7 +8,7 @@ import Upload from './components/Upload';
 import FileList from './components/FileList';
 import Logo from './components/Logo';
 
-class App extends Component {
+export default class App extends Component {
   state = {
     uploadedFiles: []
   };
@@ -87,5 +87,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
