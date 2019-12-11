@@ -1,6 +1,6 @@
 import React from 'react';
 import { CircularProgressbar } from 'react-circular-progressbar';
-import { MdCheckCircle, MdError, MdLink } from 'react-icons/md';
+import { MdCheckCircle, MdError, MdLink, MdDoneAll, MdWarning } from 'react-icons/md';
 import { Container, FileInfo, Preview } from './styles';
 
 export default function FileList({ files }) {
@@ -15,10 +15,10 @@ export default function FileList({ files }) {
                             <span>
                                 {uploadedFile.readableSize}{" "}
                                 {uploadedFile.uploaded && (
-                                    <span
+                                    <span className="status"
                                         style={uploadedFile.status === 'Organizado'
-                                            ? { color: '#78e5d5', fontWeight: 'bold' }
-                                            : { color: '#e57878', fontWeight: 'bold' }}>
+                                            ? { color: '#4caf50' }
+                                            : { color: '#e57878' }}>
                                         {uploadedFile.status}
                                     </span>
                                 )}
@@ -31,7 +31,7 @@ export default function FileList({ files }) {
                             <CircularProgressbar
                                 styles={{
                                     root: { width: 24 },
-                                    path: { stroke: "#7159c1" }
+                                    path: { stroke: "#4caf50" }
                                 }}
                                 strokeWidth={10}
                                 value={uploadedFile.progress}
@@ -50,6 +50,8 @@ export default function FileList({ files }) {
 
                         {uploadedFile.uploaded && <MdCheckCircle size={24} color="#78e5d5" />}
                         {uploadedFile.error && <MdError size={24} color="#e57878" />}
+                        {uploadedFile.uploaded && uploadedFile.status === 'Organizado' && <MdDoneAll size={24} color="#78e5d5" />}
+                        {uploadedFile.uploaded && uploadedFile.status === 'Desorganizado' && <MdWarning size={24} color="#e57878" />}
                     </div>
                 </li>
             ))}
