@@ -43,6 +43,7 @@ export const FileInfo = styled.div`
             }
         }
     }
+}
 `;
 
 export const Preview = styled.div`
