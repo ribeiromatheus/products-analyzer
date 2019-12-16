@@ -1,7 +1,7 @@
 # Products Analyzer
 **Organized and disorganized products identifier**
 
-It is a web app that identifies organized and disorganized products in **"supermakert freezers and shelfs with a fixed camera aimed to it"**. The application uses **IBM Watson Visual Recognition**
+It is a web app that identifies organized and disorganized products in **"supermakert freezers and shelfs with a fixed camera aimed to it"**. The application uses **IBM Watson Visual Recognition**.
 
 ## Tecnologies
 - Node.js
