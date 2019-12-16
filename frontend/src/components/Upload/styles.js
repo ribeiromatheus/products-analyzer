@@ -33,4 +33,5 @@ export const UploadMessage = styled.p`
   justify-content: center;
   align-items: center;
   padding: 15px 0;
+  font-size: 18px;
 `;
