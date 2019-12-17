@@ -19,7 +19,7 @@ It is a web app that identifies organized and disorganized products in **"superm
 
 ## Web app screenshots
 ### Login
-![image](https://user-images.githubusercontent.com/41703972/70929928-de578800-2012-11ea-9b5b-54e7187273a0.png)
+![image](https://user-images.githubusercontent.com/41703972/71019211-ba5e7a00-20d8-11ea-9b42-73bc37c43c92.png)
 
 ### Home
 ![image](https://user-images.githubusercontent.com/41703972/70930322-ab61c400-2013-11ea-97ef-b602d480009c.png)
