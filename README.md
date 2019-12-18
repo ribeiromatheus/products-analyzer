@@ -30,4 +30,4 @@ It is a web app that identifies organized and disorganized products in **"superm
 ## Get started
 At first, clone the repo by running `git clone https://github.com/ribeiromatheus/products-analyzer.git` on your favorite terminal.
 
-After cloning run `npm install` or `yarn install`
+After cloning run `npm install` or `yarn install` on **backend** and **frontend** folder.
