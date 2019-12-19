@@ -21,6 +21,12 @@ header {
   text-align: center;
 }
 
+span {
+  text-align: center;
+  color: #e57878;
+  font-weight: bolder;
+}
+
 .container {
   margin: 80px auto 0;
   max-width: 450px;

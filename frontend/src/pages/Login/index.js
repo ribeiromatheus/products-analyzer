@@ -6,21 +6,21 @@ import './styles.css';
 export default function Login({ history }) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-
+    const [errorLogin, setErrorLogin] = useState('')
 
     async function handleSubmit(event) {
         event.preventDefault();
 
-        const response = await api.post('/login', {
-            email,
-            password
-        })
+        try {
+            await api.post('/login', {
+                email,
+                password
+            });
 
-        const { _id } = response.data;
-
-        localStorage.setItem('user', _id);
-
-        history.push('/main');
+            history.push('/main');
+        } catch (error) {
+            setErrorLogin(error.response.data);
+        }
     }
 
     return (
@@ -28,6 +28,7 @@ export default function Login({ history }) {
             <div className="content">
                 <Logo />
                 <form onSubmit={handleSubmit}>
+                    <span>{errorLogin}</span>
                     <label htmlFor="email">E-MAIL * </label>
                     <input
                         type="email"

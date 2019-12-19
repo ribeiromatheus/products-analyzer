@@ -6,7 +6,7 @@ const UserController = require('./controller/UserController');
 
 const routes = express.Router();
 
-routes.post('/login', UserController.store);
+routes.post('/login', UserController.login);
 routes.get('/recognize', VisualRecognitionController.index);
 routes.post('/recognize', multer(multerConfig).single('file'), VisualRecognitionController.recognize);
 routes.delete('/recognize/:id', VisualRecognitionController.remove);
