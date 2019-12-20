@@ -13,9 +13,12 @@ It is a web app that identifies organized and disorganized products in **"superm
 - [React Icons](https://github.com/react-icons/react-icons)
 - [axios](https://github.com/axios/axios)
 - [ibm-watson](https://github.com/watson-developer-cloud/node-sdk)
+- [MongoDB (mongoose)](https://github.com/Automattic/mongoose)
 
 ## Requirements
 - [Node.js](https://nodejs.org)
+- [IBM Cloud Account](https://cloud.ibm.com/login)
+- [MongoDB Account](https://www.mongodb.com/cloud/atlas/efficiency?utm_source=google&utm_campaign=gs_americas_brazil_search_brand_atlas_desktop&utm_term=mongo%20atlas&utm_medium=cpc_paid_search&utm_ad=e&_bt=335229503988&_bn=g&gclid=EAIaIQobChMIhtmIud_E5gIVEISRCh0sygfvEAAYASABEgLGCvD_BwE)
 
 ## Web app screenshots
 ### Login
@@ -31,3 +34,10 @@ It is a web app that identifies organized and disorganized products in **"superm
 At first, clone the repo by running `git clone https://github.com/ribeiromatheus/products-analyzer.git` on your favorite terminal.
 
 After cloning run `npm install` or `yarn install` on **backend** and **frontend** folder.
+
+### Create a Watson Studio instance on IBM CLOUD
+- Create a [Watson Studio](https://cloud.ibm.com/catalog/services/watson-studio) instance, then click on "Get Started" button.
+- Upload the `dataset.zip` file.
+- Train it on [Visual Recognition.](https://cloud.ibm.com/catalog/services/visual-recognition)
+
+After that, go to **backend** folder and rename `sample.env` file to `.env`, then enter your own credentials.
