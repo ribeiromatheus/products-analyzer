@@ -19,7 +19,7 @@ module.exports = {
         }
     }),
     limits: {
-        fileSize: 2 * Math.pow(1024, 2)
+        fileSize: 10000000
     },
     fileFilter: (req, file, cb) => {
         const allowedImages = [
