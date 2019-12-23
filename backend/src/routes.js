@@ -8,7 +8,7 @@ const routes = express.Router();
 
 routes.post('/login', UserController.login);
 routes.get('/recognize', VisualRecognitionController.index);
-routes.post('/recognize', multer(multerConfig).single('file'), VisualRecognitionController.recognize);
+routes.post('/recognize', multer(multerConfig).single('file'), VisualRecognitionController.storeAndRecognize);
 routes.delete('/recognize/:id', VisualRecognitionController.remove);
 
 module.exports = routes;

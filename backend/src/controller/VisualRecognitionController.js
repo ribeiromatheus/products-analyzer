@@ -15,14 +15,23 @@ module.exports = {
         return res.json(products);
     },
 
-    async recognize(req, res) {
-        const { filename } = req.file;
+    async storeAndRecognize(req, res) {
+        const { filename, originalname: name, size } = req.file;
+
+        const getKey = filename.split('-');
 
         const classifyParams = {
             images_file: fs.createReadStream(`./tmp/uploads/${filename}`),
             owners: ['me'],
             threshold: 0.03
         };
+
+        await Product.create({
+            name,
+            size,
+            key: getKey[0],
+            url: filename
+        });
 
         visualRecognition.classify(classifyParams)
             .then(classifiedImages => {
