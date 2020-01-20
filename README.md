@@ -3,7 +3,7 @@
 
 It is a web app that identifies organized and disorganized products in **"supermakert freezers and shelfs with a fixed camera aimed to it"**. The application uses **IBM Watson Visual Recognition**.
 
-## Tecnologies
+## Technologies
 - Node.js
 - React
 - IBM Watson Visual Recognition
