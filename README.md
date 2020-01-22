@@ -1,7 +1,7 @@
 # Products Analyzer
 **Organized and disorganized products identifier**
 
-It is a web app that identifies organized and disorganized products in **"supermakert freezers and shelfs with a fixed camera aimed to it"**. The application uses **IBM Watson Visual Recognition**.
+It is a web app that identifies organized and disorganized products in **"supermakert freezers and shelfs with a fixed camera aimed to it"** by using **IBM Watson Visual Recognition**.
 
 ## Technologies
 - Node.js
@@ -31,13 +31,13 @@ It is a web app that identifies organized and disorganized products in **"superm
 ![image](https://user-images.githubusercontent.com/41703972/70930372-cc2a1980-2013-11ea-9795-69529ebfb092.png)
 
 ## Get started
-At first, clone the repo by running `git clone https://github.com/ribeiromatheus/products-analyzer.git` on your favorite terminal.
-
-After cloning run `npm install` or `yarn install` on **backend** and **frontend** folder.
+1. At first, clone the repo by running `git clone https://github.com/ribeiromatheus/products-analyzer.git` on your favorite terminal.
+2. After cloning run `npm install` or `yarn` on **backend** and **frontend** folder.
+3. Go to **backend** folder and create a folder named **tmp** then **uploads** inside the previous one (**tmp**).
 
 ### Create a Watson Studio instance on IBM CLOUD
 - Create a [Watson Studio](https://cloud.ibm.com/catalog/services/watson-studio) instance, then click on "Get Started" button.
 - Upload the `dataset.zip` file.
 - Train it on [Visual Recognition.](https://cloud.ibm.com/catalog/services/visual-recognition)
 
-After that, go to **backend** folder and rename `sample.env` file to `.env`, then enter your own credentials.
+Now, go to **backend** folder and rename `sample.env` file to `.env`, then enter your own credentials.
