@@ -12,10 +12,14 @@ export default function Login({ history }) {
         event.preventDefault();
 
         try {
-            await api.post('/login', {
+            const response = await api.post('/login', {
                 email,
                 password
             });
+
+            const { _id } = response.data;
+
+            localStorage.setItem('user', _id);
 
             history.push('/main');
         } catch (error) {
