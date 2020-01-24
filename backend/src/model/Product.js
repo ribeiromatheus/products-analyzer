@@ -5,6 +5,11 @@ const ProductSchema = new Schema({
     size: String,
     key: String,
     url: String,
+    status: String,
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    },
     createdAt: {
         type: Date,
         default: Date.now
