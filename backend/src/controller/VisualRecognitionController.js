@@ -26,25 +26,31 @@ module.exports = {
             threshold: 0.03
         };
 
-        await Product.create({
+        const classifiedImages = await visualRecognition.classify(classifyParams);
+
+        let status = '';
+
+        if (classifiedImages.images[0].classifiers[0].classes == '')
+            status = 'Organizado';
+        else
+            status = 'Desorganizado';
+
+        const product = await Product.create({
             name,
             size,
             key: getKey[0],
-            url: filename
+            url: filename,
+            status
         });
 
-        visualRecognition.classify(classifyParams)
-            .then(classifiedImages => {
-                let status = '';
+        await product.populate('user').execPopulate();
 
-                if (classifiedImages.images[0].classifiers[0].classes == '')
-                    status = 'Organizado';
-                else
-                    status = 'Desorganizado';
+        const ownerSocket = req.connectedUsers[product.user];
 
-                return res.json(status)
-            })
-            .catch(err => res.status(500).json(err));
+        if (ownerSocket)
+            req.io.to(ownerSocket).emit('product', product);
+
+        return res.json(product);
     },
 
     async remove(req, res) {
