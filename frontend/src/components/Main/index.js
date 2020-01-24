@@ -60,7 +60,7 @@ export default class Main extends Component {
             .then(response => {
                 this.updateFile(uploadedFile.id, {
                     uploaded: true,
-                    status: response.data,
+                    status: response.data.status,
                 });
             })
             .catch(() => {
