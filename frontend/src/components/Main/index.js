@@ -45,10 +45,12 @@ export default class Main extends Component {
 
     processUpload = uploadedFile => {
         const data = new FormData();
+        const user_id = localStorage.getItem('user');
 
         data.append('file', uploadedFile.file, uploadedFile.name);
 
         api.post('recognize', data, {
+            headers: { user_id },
             onUploadProgress: e => {
                 const progress = parseInt(Math.round((e.loaded * 100) / e.total));
 
