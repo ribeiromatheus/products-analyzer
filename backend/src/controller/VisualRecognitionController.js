@@ -17,6 +17,7 @@ module.exports = {
 
     async storeAndRecognize(req, res) {
         const { filename, originalname: name, size } = req.file;
+        const { user_id } = req.headers;
 
         const getKey = filename.split('-');
 
@@ -36,6 +37,7 @@ module.exports = {
             status = 'Desorganizado';
 
         const product = await Product.create({
+            user: user_id,
             name,
             size,
             key: getKey[0],
@@ -45,7 +47,7 @@ module.exports = {
 
         await product.populate('user').execPopulate();
 
-        const ownerSocket = req.connectedUsers[product.user];
+        const ownerSocket = req.connectedUsers[product.user._id];
 
         if (ownerSocket)
             req.io.to(ownerSocket).emit('product', product);
