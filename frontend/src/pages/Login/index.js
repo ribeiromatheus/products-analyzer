@@ -12,7 +12,7 @@ export default function Login({ history }) {
         event.preventDefault();
 
         try {
-            const response = await api.post('/login', {
+            const response = await api.post('/session', {
                 email,
                 password
             });
