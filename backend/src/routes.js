@@ -2,8 +2,8 @@ const express = require('express');
 const multer = require('multer');
 
 const multerConfig = require('./config/multer');
-const VisualRecognitionController = require('./controller/VisualRecognitionController');
-const UserController = require('./controller/UserController');
+const VisualRecognitionController = require('./controllers/VisualRecognitionController');
+const UserController = require('./controllers/UserController');
 
 const routes = express.Router();
 

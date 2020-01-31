@@ -3,7 +3,7 @@ require('dotenv').config();
 const fs = require('fs');
 const VisualRecognitionV3 = require('ibm-watson/visual-recognition/v3');
 
-const Product = require('../model/Product');
+const Product = require('../models/Product');
 
 const visualRecognition = new VisualRecognitionV3({
     version: process.env.VERSION,
