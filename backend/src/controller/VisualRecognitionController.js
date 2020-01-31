@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const fs = require('fs');
 const VisualRecognitionV3 = require('ibm-watson/visual-recognition/v3');
+
 const Product = require('../model/Product');
 
 const visualRecognition = new VisualRecognitionV3({
@@ -11,7 +12,14 @@ const visualRecognition = new VisualRecognitionV3({
 
 module.exports = {
     async index(req, res) {
-        const products = await Product.find();
+        const { user_id } = req.headers;
+
+        const products = await Product.find({
+            $and: [{
+                user: { $eq: user_id }
+            }]
+        });
+
         return res.json(products);
     },
 
