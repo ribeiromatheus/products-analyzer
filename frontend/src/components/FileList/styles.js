@@ -31,7 +31,6 @@ export const FileInfo = styled.div`
         span.status {
             font-size: 14px;
             font-weight: bold;
-            color: #999;
             margin-top: 5px;
 
             button {
