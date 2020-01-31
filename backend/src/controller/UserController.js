@@ -1,13 +1,13 @@
 const User = require('../model/User');
 
 module.exports = {
-    async login(req, res) {
-        const { email } = req.body;
+    async store(req, res) {
+        const { email, password } = req.body;
 
-        const user = await User.findOne({ email });
+        let user = await User.findOne({ email, password });
 
         if (!user)
-            return res.status(404).json('Login inválido');
+            user = await User.create({ email, password });
 
         return res.json(user);
     }
