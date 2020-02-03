@@ -27,6 +27,7 @@ It is a web app that identifies organized and disorganized products in **"superm
     <ul>
         <li><a href="#Backend">Backend</a></li>
         <li><a href="#Web">Web</a></li>
+        <li><a href="#Mobile">Mobile</a></li>
     </ul>
     <li><a href="#Requirements">Requirements</a></li>
     <li><a href="#screenshots">Web app screenshots</a></li>
@@ -42,6 +43,7 @@ It is a web app that identifies organized and disorganized products in **"superm
 ## <p id="techs">Technologies</p>
 - Node.js
 - React
+- React Native with [Expo](https://expo.io/learn)
 - IBM Watson Visual Recognition
 
 ## <p id="libs">Useful libs / modules</p>
@@ -58,6 +60,12 @@ It is a web app that identifies organized and disorganized products in **"superm
 - [React Icons](https://github.com/react-icons/react-icons)
 - [axios](https://github.com/axios/axios)
 - [socket.io-client](https://github.com/socketio/socket.io-client)
+- [filesize](https://github.com/hustcc/filesize.js/)
+- [styled-components](https://github.com/styled-components/styled-components)
+
+### <p id="Mobile">Mobile</p>
+- [axios](https://github.com/axios/axios)
+- [react-navigation](https://github.com/react-navigation/react-navigation)
 
 ## <p id="Requirements">Requirements</p>
 - [Node.js](https://nodejs.org)
