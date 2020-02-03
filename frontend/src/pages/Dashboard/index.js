@@ -23,7 +23,7 @@ export default function Dashboard() {
     useEffect(() => {
         async function loadProducts() {
             const user_id = localStorage.getItem('user');
-            const response = await api.get('/recognize', {
+            const response = await api.get('/products', {
                 headers: { user_id }
             });
 
