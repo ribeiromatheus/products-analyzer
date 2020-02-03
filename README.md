@@ -10,10 +10,6 @@
   <a href="https://github.com/ribeiromatheus/products-analyzer/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/ribeiromatheus/products-analyzer">
   </a>
-
-  <a href="https://github.com/ribeiromatheus/products-analyzer/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/ribeiromatheus/products-analyzer">
-  </a>
 </p>
 
 **Organized and disorganized products identifier**
@@ -84,8 +80,15 @@ It is a web app that identifies organized and disorganized products in **"superm
 
 ## <p id="get-started">Get started</p>
 1. At first, clone the repo by running `git clone https://github.com/ribeiromatheus/products-analyzer.git` on your favorite terminal.
-2. After cloning run `npm install` or `yarn` on **backend** and **frontend** folder.
+2. After cloning run `npm install` or `yarn` on **backend**, **frontend** and **products-analyzer** folder.
 3. Go to **backend** folder and create a folder named **tmp** then **uploads** inside the previous one (**tmp**).
+4. Go to **products-analyzer** folder, create a folder in the root project directory named **credentials** then create a **json** file named **baseUrl** so you can add your ip address followed by server port or your server url like the following example.
+
+```json
+{
+    "ip": "http://<ip goes here>:<port goes here>"
+}
+```
 
 ### <p id="get-started-watson">Create a Watson Studio instance on IBM CLOUD</p>
 - Create a [Watson Studio](https://cloud.ibm.com/catalog/services/watson-studio) instance, then click on "Get Started" button.
