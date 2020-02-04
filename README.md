@@ -29,7 +29,6 @@ It is a web app that identifies organized and disorganized products in **"superm
     <li><a href="#screenshots">Web app screenshots</a></li>
     <ul>
         <li><a href="#Login">Login</a></li>
-        <li><a href="#Home">Home</a></li>
         <li><a href="#status">Home and images uploades following its status</a></li>
     </ul>
         <li><a href="#get-started">Get started</a></li>
@@ -72,11 +71,8 @@ It is a web app that identifies organized and disorganized products in **"superm
 ### <p id="Login">Login</p>
 ![image](https://user-images.githubusercontent.com/41703972/71019211-ba5e7a00-20d8-11ea-9b42-73bc37c43c92.png)
 
-### <p id="Home">Home</p>
-![image](https://user-images.githubusercontent.com/41703972/70930322-ab61c400-2013-11ea-97ef-b602d480009c.png)
-
 ### <p id="status">Home and images uploades following its status</p>
-![image](https://user-images.githubusercontent.com/41703972/70930372-cc2a1980-2013-11ea-9795-69529ebfb092.png)
+![image](https://user-images.githubusercontent.com/41703972/73768627-1b5d1280-4758-11ea-96a9-6cd0e8f43b2e.png)
 
 ## <p id="get-started">Get started</p>
 1. At first, clone the repo by running `git clone https://github.com/ribeiromatheus/products-analyzer.git` on your favorite terminal.
