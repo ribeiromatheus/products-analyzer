@@ -17,7 +17,7 @@ export default function Login({ navigation }) {
     }, []);
 
     async function handleSubmit() {
-        const response = await api.post('/login', { email, password });
+        const response = await api.post('/session', { email, password });
 
         const { _id } = response.data;
 
