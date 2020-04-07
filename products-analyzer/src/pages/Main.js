@@ -74,13 +74,16 @@ export default function Main() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'center'
     },
     button: {
         height: 42,
-        backgroundColor: '#f05a5b',
+        backgroundColor: '#4caf50',
         justifyContent: 'center',
         alignItems: 'center',
+        borderColor: '#fff',
+        borderWidth: 2,
+        padding: 20,
         borderRadius: 2
     },
     buttonText: {
