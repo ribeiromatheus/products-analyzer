@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { View, AsyncStorage, KeyboardAvoidingView, Text, TextInput, TouchableOpacity, StyleSheet, Platform } from 'react-native';
+import { View, Image, AsyncStorage, KeyboardAvoidingView, Text, TextInput, TouchableOpacity, StyleSheet, Platform } from 'react-native';
 
 import api from '../services/api';
+
+import logo from '../assets/logo.png';
 
 export default function Login({ navigation }) {
     const [email, setEmail] = useState('');
@@ -27,6 +29,7 @@ export default function Login({ navigation }) {
 
     return (
         <KeyboardAvoidingView behavior="padding" style={styles.container}>
+            <Image source={logo} />
             <View style={styles.form}>
                 <Text style={styles.label}>SEU E-MAIL *</Text>
                 <TextInput
@@ -88,7 +91,7 @@ const styles = StyleSheet.create({
     },
     button: {
         height: 42,
-        backgroundColor: '#f05a5b',
+        backgroundColor: '#4caf50',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 2
