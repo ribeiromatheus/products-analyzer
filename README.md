@@ -90,7 +90,7 @@ It is a web app that identifies organized and disorganized products in **"superm
 1. At first, clone the repo by running `git clone https://github.com/ribeiromatheus/products-analyzer.git` on your favorite terminal.
 2. After cloning run `npm install` or `yarn` on **backend**, **frontend** and **products-analyzer** folder.
 3. Go to **backend** folder and create a folder named **tmp** then **uploads** inside the previous one (**tmp**).
-4. Go to **products-analyzer** folder, create a folder in the root project directory named **credentials** then create a **json** file named **baseUrl** so you can add your ip address followed by server port or your server url like the following example.
+4. Go to **products-analyzer** folder, create a folder in the **src** directory named **credentials** then create a **json** file named **baseUrl** so you can add your ip address followed by server port or your server url like the following example.
 
 ```json
 {
@@ -103,4 +103,7 @@ It is a web app that identifies organized and disorganized products in **"superm
 - Upload the `dataset.zip` file.
 - Train it on [Visual Recognition.](https://cloud.ibm.com/catalog/services/visual-recognition)
 
-Now, go to **backend** folder and rename `sample.env` file to `.env`, then enter your own credentials.
+1. Now, go to **backend** folder and rename `sample.env` file to `.env`, then enter your own credentials.
+2. Run `npm run dev`, `npm dev` or `yarn dev` to run the server (make sure you are in the **backend** folder).
+3. Run `npm start` or `yarn start` to run the web app (make sure you are in the **frontend** folder).
+4. Run `npm start` or `yarn start` to run the mobile app (make sure you are in the **products-analyzer** folder).
