@@ -19,25 +19,32 @@ It is a web app that identifies organized and disorganized products in **"superm
 ## Table of contents
 <ul>
     <li><a href="#techs">Technologies</a></li>
-    <li><a href="#libs">Useful libs / modules</a></li>
-    <ul>
-        <li><a href="#Backend">Backend</a></li>
-        <li><a href="#Web">Web</a></li>
-        <li><a href="#Mobile">Mobile</a></li>
-    </ul>
+    <li><a href="#libs">Useful libs / modules</a>
+        <ul>
+            <li><a href="#Backend">Backend</a></li>
+            <li><a href="#Web">Web</a></li>
+            <li><a href="#Mobile">Mobile</a></li>
+        </ul>
+    </li>
     <li><a href="#Requirements">Requirements</a></li>
-    <li><a href="#screenshots">Web app screenshots</a></li>
-    <ul>
-        <li><a href="#Login">Login</a></li>
-        <li><a href="#status">Home and images uploades following its status</a></li>
-    </ul>
-    <li><a href="#mscreenshots">Mobile app screenshots</a></li>
-    <ul>
-        <li><a href="#LoginMobile">Login</a></li>
-        <li><a href="#HomeMobile">Home: take your picture and send it</a></li>
-    </ul>
-        <li><a href="#get-started">Get started</a></li>
-        <li><a href="#get-started-watson">Create a Watson Studio instance on IBM CLOUD</a></li>
+    <li><a href="#screenshots">Web app screenshots</a>
+        <ul>
+            <li><a href="#Login">Login</a></li>
+            <li><a href="#status">Home and images uploades following its status</a></li>
+        </ul>
+    </li>
+    <li><a href="#mscreenshots">Mobile app screenshots</a>
+        <ul>
+            <li><a href="#LoginMobile">Login</a></li>
+            <li><a href="#HomeMobile">Home: take your picture and send it</a></li>
+        </ul>
+    </li>
+    <li><a href="#get-started">Get started</a>
+        <ul>
+            <li><a href="#get-started-watson">Create a Watson Studio instance on IBM CLOUD</a></li>
+            <li><a href="/blob/master/README.txt">README para executar o projeto (simplificado)</a></li>
+        </ul>
+    </li>
 </ul>
 
 ## <p id="techs">Technologies</p>
