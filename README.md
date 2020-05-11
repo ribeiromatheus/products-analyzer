@@ -42,7 +42,7 @@ It is a web app that identifies organized and disorganized products in **"superm
     <li><a href="#get-started">Get started</a>
         <ul>
             <li><a href="#get-started-watson">Create a Watson Studio instance on IBM CLOUD</a></li>
-            <li><a href="/blob/master/README.txt">README para executar o projeto (simplificado)</a></li>
+            <li><a href="/README.txt">README para executar o projeto (simplificado)</a></li>
         </ul>
     </li>
 </ul>
