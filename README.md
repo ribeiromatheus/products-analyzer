@@ -129,7 +129,7 @@ A aplicação mobile é a simulação da câmera que ficaria fixada na frente do
 
 ## <p id="intro">🔆 Apresentação da aplicação</p>
 ### <p id="video">💾 Vídeo</p>
-Você pode conferir o vídeo da aplicação rodado [aqui](https://drive.google.com/open?id=1Om3V4fckRA4p-Sf6jplMuQvS9uMVwrwU).
+Você pode conferir o vídeo da aplicação [aqui](https://drive.google.com/open?id=1Om3V4fckRA4p-Sf6jplMuQvS9uMVwrwU).
 
 ### <p id="doc">📄 Documentação</p>
 Você pode ler a documentção do projeto [aqui](https://drive.google.com/open?id=1JrMtnanYrsjV5qiCFRsPvWVwa5NDfvGGjWgpzF4hs7U).
