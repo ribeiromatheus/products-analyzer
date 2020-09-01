@@ -4,6 +4,7 @@ const fs = require('fs');
 const VisualRecognitionV3 = require('ibm-watson/visual-recognition/v3');
 
 const Product = require('../models/Product');
+const capitalizeFirstLetter = require('../utils/capitalizeFirstLetter');
 
 const visualRecognition = new VisualRecognitionV3({
     version: process.env.VERSION,
@@ -37,12 +38,7 @@ module.exports = {
 
         const classifiedImages = await visualRecognition.classify(classifyParams);
 
-        let status = '';
-
-        if (classifiedImages.images[0].classifiers[0].classes == '')
-            status = 'Organizado';
-        else
-            status = 'Desorganizado';
+        const status = capitalizeFirstLetter(classifiedImages.images[0].classifiers[0].classes[0].class);
 
         const product = await Product.create({
             user: user_id,
